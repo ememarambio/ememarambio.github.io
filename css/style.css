@@ -1317,22 +1317,23 @@ input[type='button']:disabled,
   margin-top: auto;
 }
 
-/* Rules for inline icons (like circular shields or small square logos) */
-img.logo {
-  display: inline-block !important;
-  max-width: none !important;
-  width: auto !important;
-  height: 1.1em !important;      /* Scales dynamically with font size */
-  vertical-align: middle;        /* Centers the icon vertically with adjacent letters */
-  margin: 0 0.15em !important;   /* Adds a tiny gap on the left and right */
+.logo {
+    width: auto;
+    height: 1em;   /* For square or circular icons, like the Brown shield */
 }
 
-/* Rules for text-based wordmarks (like the Boeing or horizontal Brown logo) */
-img.logo2 {
-  display: inline-block !important;
-  max-width: none !important;
-  width: auto !important;
-  height: 0.95em !important;     /* Slightly shorter to prevent stretching line heights */
-  vertical-align: middle;
-  margin: 0 0.15em !important;
+.logo2 {
+    width: auto;
+    height: 0.6em; /* For horizontal text-based wordmarks, like the Brown lettering */
+}
+
+.logo3 {
+    width: auto;
+    height: 0.5em; /* For ultra-small indicator logos */
+}
+
+body.home-page .logo,
+body.home-page .logo2,
+body.home-page .logo3 {
+    vertical-align: middle;
 }
