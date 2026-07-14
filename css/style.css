@@ -1316,3 +1316,23 @@ input[type='button']:disabled,
   position: static;
   margin-top: auto;
 }
+
+/* Rules for inline icons (like circular shields or small square logos) */
+img.logo {
+  display: inline-block !important;
+  max-width: none !important;
+  width: auto !important;
+  height: 1.1em !important;      /* Scales dynamically with font size */
+  vertical-align: middle;        /* Centers the icon vertically with adjacent letters */
+  margin: 0 0.15em !important;   /* Adds a tiny gap on the left and right */
+}
+
+/* Rules for text-based wordmarks (like the Boeing or horizontal Brown logo) */
+img.logo2 {
+  display: inline-block !important;
+  max-width: none !important;
+  width: auto !important;
+  height: 0.95em !important;     /* Slightly shorter to prevent stretching line heights */
+  vertical-align: middle;
+  margin: 0 0.15em !important;
+}
