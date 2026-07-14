@@ -1317,23 +1317,23 @@ input[type='button']:disabled,
   margin-top: auto;
 }
 
+/* --- Corrected Inline Logo Styling --- */
+.logo, .logo2, .logo3 {
+  display: inline-block !important; /* Overrides block-level defaults from Skel */
+  max-width: none !important;        /* Prevents template from altering dimensions */
+  width: auto !important;            /* Maintains correct aspect ratio */
+  vertical-align: middle !important; /* Aligns them centered with baseline text */
+  margin: 0 0.2em !important;        /* Adds a tiny gap on left/right so text doesn't touch */
+}
+
 .logo {
-    width: auto;
-    height: 1em;   /* For square or circular icons, like the Brown shield */
+  height: 1.1em !important; /* Slightly larger for square/circle logos (e.g., SOKENDAI, ULTIMATE) */
 }
 
 .logo2 {
-    width: auto;
-    height: 0.6em; /* For horizontal text-based wordmarks, like the Brown lettering */
+  height: 0.7em !important; /* For horizontal wordmarks */
 }
 
 .logo3 {
-    width: auto;
-    height: 0.5em; /* For ultra-small indicator logos */
-}
-
-body.home-page .logo,
-body.home-page .logo2,
-body.home-page .logo3 {
-    vertical-align: middle;
+  height: 0.5em !important; /* For ultra-small indicators */
 }
