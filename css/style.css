@@ -1208,15 +1208,23 @@ input[type='button']:disabled,
 
 /* One */
 
+/* --- Modern Styled Floating Banner --- */
 #about:before {
-  background-image: url('../images/banners/mosculp.jpg');
-  background-position: top left;
+  background-image:
+    linear-gradient(120deg, rgba(20, 24, 29, 0.45) 0%, rgba(67, 43, 35, 0.25) 55%, rgba(20, 24, 29, 0.25) 100%),
+    url('../images/banners/ultimate-ai.png');
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   content: '';
   display: block;
-  height: 15em;
-  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 2.2rem;                       
+  box-shadow: 0 28px 70px rgba(37, 23, 16, 0.16);
+  height: clamp(16rem, 32vw, 21rem);          
+  margin: 1.6rem auto -5.2rem;          
+  max-width: calc(68rem + 3rem);
+  width: calc(100% - 3rem);
 }
 
 /* Footer */
@@ -1336,4 +1344,21 @@ input[type='button']:disabled,
 
 .logo3 {
   height: 0.5em !important; /* For ultra-small indicators */
+}
+
+/* --- Avatar Frame Fix --- */
+.image.avatar {
+  border-radius: 50% !important;
+  overflow: hidden;
+  width: 8em !important;
+  height: 8em !important;      /* Forces a square box */
+  margin: 0 auto 2.25em auto;
+}
+
+.image.avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;        /* Crops non-square images without distortion */
+  object-position: center !important; /* Keeps crop centered */
+  border-radius: 50% !important;
 }
